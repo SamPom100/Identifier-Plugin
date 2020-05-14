@@ -8,7 +8,7 @@ description: Identify a player based on right click
 permissions:
   identify.immune:
     description: You can't be targeted by the tool.
-    default: true
+    default: false
 
 
 
