@@ -8,12 +8,12 @@ description: Identify a player based on right click
 permissions:
   identify.immune:
     description: You can't be targeted by the tool.
-    default: false
+    default: true
 
 
 
 commands:
-  mask:
+  identifier:
     description: Gives you the Identify tool!
     usage: /identifier
     permission: identify.immune

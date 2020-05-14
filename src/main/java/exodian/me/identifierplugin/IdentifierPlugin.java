@@ -28,9 +28,9 @@ public class IdentifierPlugin extends JavaPlugin {
         getLogger().info("IdentifierPlugin has started.");
 
         getServer().getPluginManager().registerEvents(m, this);
+        getCommand("identifier").setExecutor(this::onCommand);
 
         m.prepare();
-
 
     }
 
@@ -42,7 +42,7 @@ public class IdentifierPlugin extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("Identifier")) {
+        if (cmd.getName().equalsIgnoreCase("identifier")) {
             Player p = (Player) sender;
             if (p.hasPermission("identify.immune")) {
                 p.getInventory().addItem(m.getIdentityTool());
@@ -69,7 +69,7 @@ public class IdentifierPlugin extends JavaPlugin {
         public void prepareTool() {
             ItemStack InvisHelmTEMP = new ItemStack(Material.BLAZE_ROD);
             ItemMeta InvisHelmMETA = InvisHelmTEMP.getItemMeta();
-            InvisHelmMETA.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "Helm of Occlusion");
+            InvisHelmMETA.setDisplayName(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "I.D. Scanner");
             InvisHelmMETA.setLocalizedName("Identity Tool");
             ArrayList<String> lore = new ArrayList<String>();
             lore.add("Right click a player to ID them.");
