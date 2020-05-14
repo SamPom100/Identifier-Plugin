@@ -1,0 +1,20 @@
+name: IdentifierPlugin
+version: ${project.version}
+main: me.exodian.identifierplugin.IdentifierPlugin
+api-version: 1.13
+authors: [SamPom100]
+description: Identify a player based on right click
+
+permissions:
+  identify.immune:
+    description: You can't be targeted by the tool.
+    default: false
+
+
+
+commands:
+  mask:
+    description: Gives you the Identify tool!
+    usage: /identifier
+    permission: identify.immune
+    permission-message: You don't have permission to do that
