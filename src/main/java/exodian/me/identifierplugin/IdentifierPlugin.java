@@ -1,7 +1,6 @@
 package exodian.me.identifierplugin;
 
 
-
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -85,9 +84,12 @@ public class IdentifierPlugin extends JavaPlugin {
                 if (evt.getPlayer().getItemInHand().equals(IdentityTool)) {
                     final Player target = (Player) evt.getRightClicked();
                     final Player source = evt.getPlayer();
-                    final String message = getConfig().getString("nicknameFormat")
-                            .replace("%nickname%", target.getDisplayName());
-                    source.sendMessage(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "This is: " + message);
+                    if (target.hasPermission("identify.immune")) {
+                        source.sendMessage(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "This is: " + "#@#@#$%!@#!@*#%^");
+                    }
+                    else {
+                        source.sendMessage(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "This is: " + target.getDisplayName());
+                    }
                 }
             }
 
