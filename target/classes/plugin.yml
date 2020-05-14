@@ -1,6 +1,6 @@
 name: IdentifierPlugin
 version: 1.0-SNAPSHOT
-main: me.exodian.identifierplugin.IdentifierPlugin
+main: exodian.me.identifierplugin.IdentifierPlugin
 api-version: 1.13
 authors: [SamPom100]
 description: Identify a player based on right click

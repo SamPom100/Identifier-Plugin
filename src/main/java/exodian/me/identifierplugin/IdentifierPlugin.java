@@ -26,7 +26,7 @@ public class IdentifierPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        getLogger().info("MaskPlugin has started.");
+        getLogger().info("IdentifierPlugin has started.");
 
         getServer().getPluginManager().registerEvents(m, this);
 
