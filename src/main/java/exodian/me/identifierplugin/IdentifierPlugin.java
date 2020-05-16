@@ -85,7 +85,7 @@ public class IdentifierPlugin extends JavaPlugin {
                     final Player target = (Player) evt.getRightClicked();
                     final Player source = evt.getPlayer();
                     if (target.hasPermission("identify.immune")) {
-                        source.sendMessage(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "This is: " + "#@#@#$%!@#!@*#%^");
+                        source.sendMessage(ChatColor.translateAlternateColorCodes('&', "&4&o This is: &r&k#@#@#$%!@#!@*#%^");
                     }
                     else {
                         source.sendMessage(ChatColor.DARK_RED + "" + ChatColor.ITALIC + "This is: " + target.getDisplayName());
